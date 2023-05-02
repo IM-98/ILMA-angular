@@ -1,0 +1,5 @@
+<div *ngIf="tab.length >= 2" class="test1" [ngClass]="isRow ? 'row' : 'column'">
+    <mat-card *ngFor="let item of tab">
+        <mat-card-content>{{item.text}}</mat-card-content>
+    </mat-card>
+</div>
