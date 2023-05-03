@@ -1,14 +1,42 @@
 <div>
     <mat-card *ngIf="item">
-        <mat-card-content>
-        <h2>{{item.name}}</h2>
-        <mat-card-content >{{item.stats.HP}} HP</mat-card-content>
-        <mat-card-content >{{item.stats.attack}} attack</mat-card-content>
-        <mat-card-content >{{item.stats.defense}} defense</mat-card-content>
-        <mat-card-content >{{item.stats.special_attack}} special attack</mat-card-content>
-        <mat-card-content >{{item.stats.speed}} speed</mat-card-content>
-        </mat-card-content>
+        <div *ngIf="toggleUpdateForm == false">
+            <mat-card-content>
+            <h2>{{item.name}}</h2>
+            <mat-card-content >{{item.stats.HP}} HP</mat-card-content>
+            <mat-card-content >{{item.stats.attack}} attack</mat-card-content>
+            <mat-card-content >{{item.stats.defense}} defense</mat-card-content>
+            <mat-card-content >{{item.stats.special_attack}} special attack</mat-card-content>
+            <mat-card-content >{{item.stats.speed}} speed</mat-card-content>
+            </mat-card-content>
+        </div>
+        <div *ngIf="toggleUpdateForm" >
+            <form style="display: flex; flex-direction: column; padding: 50px;">
+                <div>
+                    <p>HP</p>
+                    <input type="text">
+                </div>
+                <div>
+                    <p>attack</p>
+                    <input type="text">
+                </div>
+                <div>
+                    <p>defense</p>
+                    <input type="text">
+                </div>
+                <div>
+                    <p>special</p>
+                    <input type="text">
+                </div>
+                <div>
+                    <p>speed</p>
+                    <input type="text">
+                </div>
 
-        <mat-card-actions>Update </mat-card-actions>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+        <button (click)="displayUpdateForm()">Update</button>
     </mat-card>
 </div>

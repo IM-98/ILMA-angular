@@ -8,5 +8,10 @@ import { Pokemon } from '../Pokemon';
 })
 export class DetailComponent {
   @Input() item?: Pokemon;
+  toggleUpdateForm: boolean = false;
+
+  displayUpdateForm() {
+    this.toggleUpdateForm = !this.toggleUpdateForm
+  }
 
 }
