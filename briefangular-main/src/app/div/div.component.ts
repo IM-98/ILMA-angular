@@ -1,5 +1,5 @@
-import { Component, Input } from '@angular/core';
-import { Card } from '../Card';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Pokemon } from '../Pokemon';
 
 @Component({
   selector: 'app-div',
@@ -8,8 +8,18 @@ import { Card } from '../Card';
 })
 export class DivCardComponent {
 
-  @Input() tab!: Card[]
+  @Input() tab: Pokemon[] = []
 
+  @Output() deletePokemon = new EventEmitter<number>();
+  @Output() displayPokemon = new EventEmitter<number>();
+  
+  deleteItem(id: number) {
+    console.log("deleteItem", id)
+    this.deletePokemon.emit(id);
+  }
 
-  @Input() isRow!: boolean
+  displayItem(id: number) {
+    console.log("displayItem", id)
+    this.displayPokemon.emit(id);
+  }
 }

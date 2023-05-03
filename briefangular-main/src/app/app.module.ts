@@ -10,13 +10,20 @@ import {MatCardModule} from '@angular/material/card';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import { DivCardComponent } from './div/div.component';
-
+import { DetailComponent } from './detail/detail.component';
+import { HttpClientModule } from '@angular/common/http';
+import { HomeComponent } from './home/home.component';
+import { PokemonsComponent } from './pokemons/pokemons.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    DivCardComponent
+    DivCardComponent,
+    DetailComponent,
+    HomeComponent,
+    PokemonsComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +31,9 @@ import { DivCardComponent } from './div/div.component';
     BrowserAnimationsModule,
     MatCardModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

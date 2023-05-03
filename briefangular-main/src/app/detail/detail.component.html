@@ -1,0 +1,14 @@
+<div>
+    <mat-card *ngIf="item">
+        <mat-card-content>
+        <h2>{{item.name}}</h2>
+        <mat-card-content >{{item.stats.HP}} HP</mat-card-content>
+        <mat-card-content >{{item.stats.attack}} attack</mat-card-content>
+        <mat-card-content >{{item.stats.defense}} defense</mat-card-content>
+        <mat-card-content >{{item.stats.special_attack}} special attack</mat-card-content>
+        <mat-card-content >{{item.stats.speed}} speed</mat-card-content>
+        </mat-card-content>
+
+        <mat-card-actions>Update </mat-card-actions>
+    </mat-card>
+</div>

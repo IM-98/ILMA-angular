@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { Card } from './Card';
+import { Component, OnInit } from '@angular/core';
+
 
 @Component({
   selector: 'app-root',
@@ -8,19 +8,4 @@ import { Card } from './Card';
 })
 export class AppComponent {
 
-
-  title = 'Toto';
-  cardListRow: Card[] = [
-    {text: 'This is a card'},
-    {text: 'This is a card'},
-    {text: 'This is a card'},
-  ];
-  cardListColumn = [
-    {text: 'This is a card'},
-    {text: 'This is a card'},
-    {text: 'This is a card'},
-  ]
-
-  maxColumn: number = this.cardListColumn.length;
-  maxRow: number = this.cardListRow.length;
 }
