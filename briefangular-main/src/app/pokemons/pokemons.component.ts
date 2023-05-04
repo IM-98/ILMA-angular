@@ -24,17 +24,19 @@ export class PokemonsComponent implements OnInit {
   }
 
   deletePokemonSelected(id: number) {
-    console.log("deletePokemon", id)
     this.tab = this.tab.filter(pokemon => pokemon.id !== id);
     this.filteredList = this.filteredList.filter(pokemon => pokemon.id !== id);
     this.pokemonSelected = undefined;
   }
 
   displayPokemonSelected(id: number) {
-    console.log(this.tab.find(pokemon => pokemon.id === id))
     this.pokemonSelected = this.tab.find(pokemon => pokemon.id === id);
     this.pokemonSelected = this.filteredList.find(pokemon => pokemon.id === id);
     console.log(this.pokemonSelected)
+  }
+
+  modifyThisPokemon(updatedPokemon: Pokemon){
+    this.pokemonSelected = updatedPokemon;
   }
 
   filterPokemons() {

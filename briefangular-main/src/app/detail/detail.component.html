@@ -11,29 +11,29 @@
             </mat-card-content>
         </div>
         <div *ngIf="toggleUpdateForm" >
-            <form style="display: flex; flex-direction: column; padding: 50px;">
+            <form style="display: flex; flex-direction: column; padding: 50px;" [formGroup]="form">
                 <div>
                     <p>HP</p>
-                    <input type="text">
+                    <input type="text" formControlName="HP">
                 </div>
                 <div>
                     <p>attack</p>
-                    <input type="text">
+                    <input type="text" formControlName="attack">
                 </div>
                 <div>
                     <p>defense</p>
-                    <input type="text">
+                    <input type="text" formControlName="defense">
                 </div>
                 <div>
                     <p>special</p>
-                    <input type="text">
+                    <input type="text" formControlName="special">
                 </div>
                 <div>
                     <p>speed</p>
-                    <input type="text">
+                    <input type="text" formControlName="speed">
                 </div>
 
-                <button type="submit">Submit</button>
+                <button type="submit" (click)="modifyItem()">Submit</button>
             </form>
         </div>
 
