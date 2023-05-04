@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Pokemon } from '../Pokemon';
+import { FavoritePokemonService } from '../services/favorite-pokemon.service';
 
 @Component({
   selector: 'app-div',
@@ -7,6 +8,8 @@ import { Pokemon } from '../Pokemon';
   styleUrls: ['./div.component.scss']
 })
 export class DivCardComponent {
+
+  constructor(private favoritePokemonService: FavoritePokemonService) { }
 
   @Input() tab: Pokemon[] = []
 
@@ -22,4 +25,10 @@ export class DivCardComponent {
     console.log("displayItem", id)
     this.displayPokemon.emit(id);
   }
+
+  favThisPokemon(pokemon: Pokemon) {
+    this.favoritePokemonService.addPokemon(pokemon);
+  }
+
+  
 }
