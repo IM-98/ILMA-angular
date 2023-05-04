@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { FavoritePokemonService } from '../services/favorite-pokemon.service';
-import { Pokemon } from '../Pokemon';
+import { FavoritePokemonService } from 'src/app/services/favorite-pokemon.service';
+import { Pokemon } from 'src/app/models/Pokemon';
 
 @Component({
   selector: 'app-home',

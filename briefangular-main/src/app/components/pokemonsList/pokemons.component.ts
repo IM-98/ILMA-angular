@@ -1,6 +1,6 @@
 import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
-import { GetinfoservicesService } from '../services/getinfoservices.service';
-import { Pokemon } from '../Pokemon';
+import { GetinfoservicesService } from 'src/app/services/getinfoservices.service';
+import { Pokemon } from 'src/app/models/Pokemon';
 
 @Component({
   selector: 'app-pokemons',

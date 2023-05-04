@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { Pokemon } from '../Pokemon';
+import { Pokemon } from '../../../models/Pokemon';
 import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({

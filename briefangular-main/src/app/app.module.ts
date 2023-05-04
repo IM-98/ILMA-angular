@@ -9,11 +9,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatCardModule} from '@angular/material/card';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
-import { DivCardComponent } from './div/div.component';
-import { DetailComponent } from './detail/detail.component';
+import { DivCardComponent } from './components/pokemonsList/div/div.component';
+import { DetailComponent } from './components/pokemonsList/detail/detail.component';
 import { HttpClientModule } from '@angular/common/http';
-import { HomeComponent } from './home/home.component';
-import { PokemonsComponent } from './pokemons/pokemons.component';
+import { HomeComponent } from './components/pokemonFavorite/home.component';
+import { PokemonsComponent } from './components/pokemonsList/pokemons.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 

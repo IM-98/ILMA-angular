@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { Pokemon } from '../Pokemon';
-import { FavoritePokemonService } from '../services/favorite-pokemon.service';
+import { Pokemon } from 'src/app/models/Pokemon';
+import { FavoritePokemonService } from 'src/app/services/favorite-pokemon.service';
 
 @Component({
   selector: 'app-div',
