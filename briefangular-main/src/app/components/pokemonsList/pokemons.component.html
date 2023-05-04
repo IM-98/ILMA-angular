@@ -1,0 +1,6 @@
+<div class="content d-flex">
+    <input type="text" placeholder="Search" [(ngModel)]="nameFilter" (keyup)="filterPokemons()">
+    <app-div [tab]=filteredList (deletePokemon)="deletePokemonSelected($event)" (displayPokemon)="displayPokemonSelected($event)"></app-div>
+    <app-detail [item]="pokemonSelected" (modifiedPokemon)="modifyThisPokemon($event)">
+    </app-detail>
+</div>

@@ -3,45 +3,10 @@
   <div class="d-flex flex-column justify-start align-center" role="main">
     <mat-toolbar color="primary">
       <span>Brief Angular</span>
+      <button mat-button routerLink="/home">Home</button>
+      <button mat-button routerLink="/pokemonList">Pokemons</button>
     </mat-toolbar>
-    <!-- Modifier le code ci-dessous -->
-    <div class="content d-flex">
-      <!-- Ces éléments sont affichés sur la même ligne -->
-      <div class="d-flex">
-        <mat-card>
-          <mat-card-content>This is a card</mat-card-content>
-        </mat-card>
-        <mat-card>
-          <mat-card-content>This is a card</mat-card-content>
-        </mat-card>
-        <mat-card>
-          <mat-card-content>This is a card</mat-card-content>
-        </mat-card>
-      </div>
-      <div>
-        <mat-card>
-          <mat-card-content>This is a card</mat-card-content>
-        </mat-card>
-      </div>
-      <div>
-        <mat-card>
-          <mat-card-content>This is a card</mat-card-content>
-        </mat-card>
-      </div>
-      <!-- Ces éléments sont affichés l'un en dessous de l'autre -->
-      <div>
-        <mat-card>
-          <mat-card-content>This is a card</mat-card-content>
-        </mat-card>
-        <mat-card>
-          <mat-card-content>This is a card</mat-card-content>
-        </mat-card>
-        <mat-card>
-          <mat-card-content>This is a card</mat-card-content>
-        </mat-card>
-      </div>
-    </div>
-
+    <router-outlet></router-outlet>
     <!-- Footer -->
     <footer></footer>
     <svg
@@ -62,5 +27,5 @@
     </svg>
   </div>
 
-  <router-outlet></router-outlet>
+
 </html>
